@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import * as Sentry from "@sentry/gatsby"
 import {GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout/layout'
 
@@ -15,8 +14,6 @@ const HomePage =({data})=>{
     
   )
 }
-
-Sentry.captureMessage("Something went wrong");
 
 export default HomePage
 
