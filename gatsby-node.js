@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
       const { ssps } = data
       ssps.nodes.forEach(({ slug }) => {
         createPage({
-          path: slug === "index" ? "/" : `/${slug}`,
+          path: slug === "index" ? "/" : `products/${slug}`,
           component: slash(sspTemplate),
           context: {
             slug,
