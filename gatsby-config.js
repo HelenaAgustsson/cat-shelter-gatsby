@@ -4,8 +4,19 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Jamstack site",
-    description: "Helenas Jamstack Site",
+    title: "The Shop",
+    description: "Mugs, shirts & swag",
+    menuLinks:[
+      {
+        name: 'home',
+        link: '/'
+      },
+      {
+        name: 'products',
+        link: '/products'
+      }
+    ]
+      
   },
   plugins: [
     "gatsby-transformer-sharp",
@@ -20,5 +31,8 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST
       },
     },
+    {
+      resolve: "@sentry/gatsby",
+    }
   ],
 };

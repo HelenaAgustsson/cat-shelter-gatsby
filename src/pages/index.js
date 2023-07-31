@@ -1,14 +1,15 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import {GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Layout from '../components/layout/layout'
 
 const HomePage =({data})=>{
-  console.log(data)
+
   return (
     <>
+    <Layout></Layout>
     <div>This is the homepage</div>
-    <div>{}</div>
-    <GatsbyImage image={data.contentfulProduct.image.gatsbyImageData} alt='mug' />
+    <div></div>
     </>
     
   )
