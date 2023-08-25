@@ -5,13 +5,13 @@ import PropTypes from "prop-types"
 const Header = ({ siteTitle, menuLinks }) => (
   <header
     style={{
-      background: "rebeccapurple",
+      background: "#ffbae0",
       marginBottom: "1.45rem",
     }}
   >
     <div
       style={{
-        background: "rebeccapurple",
+        background: "#ffbae0",
         marginBottom: "1.45rem",
       }}
     >
@@ -19,7 +19,6 @@ const Header = ({ siteTitle, menuLinks }) => (
         style={{
           margin: "0 auto",
           maxWidth: 960,
-          padding: "1.45rem 1.0875rem",
           display: "flex",
           justifyItems: "space-between",
           alignItems: "center",
@@ -29,7 +28,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           <Link
             to="/"
             style={{
-              color: "white",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -47,7 +46,7 @@ const Header = ({ siteTitle, menuLinks }) => (
                     padding: `1rem`,
                   }}
                 >
-                  <Link style={{ color: `white` }} to={link.link}>
+                  <Link style={{ color: `black` }} to={link.link}>
                     {link.name}
                   </Link>
                 </li>

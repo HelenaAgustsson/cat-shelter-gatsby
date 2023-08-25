@@ -3,11 +3,12 @@ const slash = require("slash")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const sspTemplate = path.resolve(`./src/templates/self-service-page.js`)
+  const sspTemplate = path.resolve(`./src/templates/product-page.js`)
+
 
   return graphql(`
     {
-      ssps:  allContentfulSelfServicePage {
+      ssps:  allContentfulProduct {
         nodes {
           slug
         }

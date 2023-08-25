@@ -17,11 +17,12 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+    `)
 
    return (
     <>
     <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata?.title} />
+    <div className="container">{children}</div>
     </>
     
    )
