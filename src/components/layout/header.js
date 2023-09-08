@@ -24,7 +24,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           alignItems: "center",
         }}
       >
-        <h1 style={{ margin: 0, flex: 1 }}>
+        <div style={{ margin: 0, flex: 1 }}>
           <Link
             to="/"
             style={{
@@ -34,7 +34,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           >
             {siteTitle}
           </Link>
-        </h1>
+        </div>
         <div>
           <nav>
             <ul style={{ display: "flex", flex: 1 }}>

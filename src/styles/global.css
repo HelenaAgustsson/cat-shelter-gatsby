@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
-body {
-  font-family: 'Roboto';
+
+.page-header h1 {
+  margin: 35px 0;
+  font-size: 50px;
 }
 
 .container {
@@ -16,9 +18,17 @@ body {
 }
 
 .theme-pink {
-  padding: 0 15px;
+  padding-left: 20px;
   margin-bottom: 25px;
   width: 25%;
+}
+
+.title-container {
+  margin-top: 10px;
+}
+
+.title-container:hover {
+  color: rgb(255, 186, 224)
 }
 
 @font-face {

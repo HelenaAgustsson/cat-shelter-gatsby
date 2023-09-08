@@ -12,7 +12,9 @@ const ProductListPage = ({data}) => {
     return (
       <>
         <Layout>
-        <h2>{data.contentfulProductListPage.title}</h2>
+          <div className="page-header">
+            <h1>{data.contentfulProductListPage.title}</h1>
+          </div>
         <ThemeContext.Provider value="pink">
           <div className="flex-container">
           <ProductList products={products}></ProductList>
