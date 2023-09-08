@@ -4,12 +4,13 @@ import {GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Product =({
     title, 
-    image
+    image,
+    alt
 })=>{
     return (
       <div>
-        <div>{title}</div>
-        <GatsbyImage image={image.gatsbyImageData} />
+        <h2>{title}</h2>
+        <GatsbyImage image={image} alt={alt} />
       </div>
         
 
@@ -18,6 +19,7 @@ const Product =({
 
 export default Product;
 
+/*
 export const query = graphql`
   fragment Product on ContentfulProduct {
     contentfulProduct(title: {}) {
@@ -28,3 +30,4 @@ export const query = graphql`
       }
   }
 `
+*/

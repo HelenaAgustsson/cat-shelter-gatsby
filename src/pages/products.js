@@ -1,24 +1,29 @@
-import React from "react"
+import React, {useContext} from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
+import ThemeContext from "../components/themecontext"
+import ProductList from "../components/productlist/productList"
+
 
 const ProductListPage = ({data}) => {
-    console.log(data)
-    const products = data.contentfulProductListPage.products;
-    console.log(products)
+  console.log(data)
+    const products = data.allContentfulProduct.nodes;
+    const theme = useContext(ThemeContext);
     return (
       <>
-      <Layout></Layout>
-        <div>{data.contentfulProductListPage.title}</div>
-        <ul>
-          <li><Link to={products[0].slug} >{products[0].title}</Link></li>
-          <li><Link to={products[1].slug} >{products[1].title}</Link></li>
-        </ul>
+        <Layout>
+          <div className="page-header">
+            <h1>{data.contentfulProductListPage.title}</h1>
+          </div>
+        <ThemeContext.Provider value="pink">
+          <div className="flex-container">
+          <ProductList products={products}></ProductList>
+          </div>
+        </ThemeContext.Provider>
+        </Layout>
       </>
 
     )
-
 }
 
 export default ProductListPage
@@ -27,15 +32,19 @@ export const pageQuery = graphql`
 query plquery {
   contentfulProductListPage {
     title
-    products {
-      slug
+  }
+  allContentfulProduct {
+    nodes {
       title
-      products {
-        image {
-          gatsbyImageData
-        }
+      slug
+      categories
+      alt
+      sku
+      image {
+        gatsbyImageData
+        title
       }
     }
   }
-  }
+}
 `
