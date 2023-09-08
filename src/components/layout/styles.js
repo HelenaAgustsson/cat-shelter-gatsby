@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const HeaderDiv = styled.div`
-    background: #9175a8;
-    color: #ffffff;
-    margin-bottom: 1.45rem;
+    color: #9175a8;
     font-weight: bold;
+    border-bottom: 1px solid;
 `;
 
 export const FlexContainer = styled.div`
