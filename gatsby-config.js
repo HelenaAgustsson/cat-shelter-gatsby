@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "The Shop",
-    description: "Mugs, shirts & swag",
+    title: "The Cat Shelter",
+    description: "A home for every cat in need",
     menuLinks:[
       {
         name: 'home',
