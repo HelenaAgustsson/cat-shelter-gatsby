@@ -7,8 +7,10 @@ import ProductList from "../components/productlist/productList"
 
 const ProductListPage = ({data}) => {
   console.log(data)
-    const products = data.allContentfulProduct.nodes;
-    const theme = useContext(ThemeContext);
+  //const inspectorProps = useContentfulInspectorMode();
+  //const d = useContentfulLiveUpdates({data});
+  const products = data.allContentfulProduct.nodes;
+  const theme = useContext(ThemeContext);
     return (
       <>
         <Layout>
@@ -35,6 +37,7 @@ query plquery {
   }
   allContentfulProduct {
     nodes {
+      contentful_id
       title
       slug
       categories

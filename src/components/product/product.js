@@ -1,15 +1,23 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby';
 import {GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
-const Product =({
-    title, 
-    image,
-    alt
-})=>{
+const Product =({productData})=>{
+  
+  const title=productData.title;
+  const image=productData.image.gatsbyImageData; 
+  const alt=productData.alt;
+
+  const updatedProduct= useContentfulLiveUpdates({
+    ...productData,
+    sys: { id: productData.contentful_id},
+  });
+  
     return (
-      <div>
-        <h2>{title}</h2>
+      <div>Product page
+        <h2>{updatedProduct.title}</h2>
         <GatsbyImage image={image} alt={alt} />
       </div>
         

@@ -2,16 +2,15 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import * as Sentry from '@sentry/gatsby'
 import Layout from '../components/layout/layout'
-
+import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
 const HomePage =({data})=>{
+  console.log(data.allContentfulHomepage.nodes[0].contentful_id)
   const img = data.allContentfulHomepage.nodes[0].heroImage;
-  console.log(img)
+  const pagetitle = data.allContentfulHomepage.nodes[0].pagetitle;
+
   return (
-    <>
-    <Layout heroImage={img}></Layout>
-    </>
-    
+    <Layout heroImage={img} pagetitle={pagetitle}></Layout>
   )
 }
 
@@ -21,8 +20,10 @@ export const pageQuery = graphql`
 query {
   allContentfulHomepage {
     nodes {
+      contentful_id
+      pagetitle
       heroImage {
-        gatsbyImageData
+        gatsbyImageData(height: 500)
       }
     }
   }

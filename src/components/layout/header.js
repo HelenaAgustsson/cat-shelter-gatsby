@@ -1,15 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { HeaderDiv, FlexContainer, TitleContainer, LinksContainer } from "./styles"
+import { HeaderDiv, FlexContainer, LogoContainer, LinksContainer } from "./styles"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <header>
     <HeaderDiv>
       <FlexContainer>
-        <TitleContainer>
+        <LogoContainer>
           <Link to="/">{siteTitle}</Link>
-        </TitleContainer>
+        </LogoContainer>
         <div>
           <nav>
             <LinksContainer>
