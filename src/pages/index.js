@@ -22,7 +22,7 @@ query {
       contentful_id
       pagetitle
       heroImage {
-        gatsbyImageData(height: 500)
+        gatsbyImageData(height: 300)
       }
     }
   }
