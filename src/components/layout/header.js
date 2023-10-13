@@ -14,17 +14,11 @@ const Header = ({ siteTitle, menuLinks }) => (
           <nav>
             <LinksContainer>
               {menuLinks.map(link => (
-                <li
-                  key={link.name}
-                  style={{
-                    listStyleType: `none`,
-                    padding: `1rem`,
-                  }}
-                >
-                  <Link to={link.link}>
+                <div key={link.name} >
+                  <Link to={link.link} style={{paddingLeft: "0 20px"}}>
                     {link.name}
                   </Link>
-                </li>
+                  </div>
               ))}
             </LinksContainer>
           </nav>

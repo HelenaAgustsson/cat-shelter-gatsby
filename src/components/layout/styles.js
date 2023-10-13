@@ -4,6 +4,7 @@ import { breakpoint, sizes } from '../theme';
 export const HeaderDiv = styled.div`
     font-weight: bold;
     border-bottom: 1px solid;
+    padding: 20px 0;
 `;
 
 export const FlexContainer = styled.div`
@@ -19,9 +20,9 @@ export const LogoContainer = styled.div`
     flex: 1;
 `;
 
-export const LinksContainer = styled.ul`
+export const LinksContainer = styled.div`
     display: flex;
-    flex: 1;
+    
 `;
 
 export const TopContainer = styled.div`
