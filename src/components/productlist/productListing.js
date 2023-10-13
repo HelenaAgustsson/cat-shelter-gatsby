@@ -8,7 +8,7 @@ const ProductListing =({product})=>{
     const theme = useContext(ThemeContext);
     return (
         <div className={`theme-${theme}`}>
-            <Link to={product.slug}><GatsbyImage image={product.image.gatsbyImageData} alt={product.alt} /></Link>
+            <Link to={product.slug}><GatsbyImage style={{  width: "80%"}} image={product.image.gatsbyImageData} alt={product.alt} /></Link>
             <div className="title-container"><Link to={product.slug}>{product.title}</Link></div>
         </div>
     )
