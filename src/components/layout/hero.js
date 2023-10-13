@@ -1,11 +1,13 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { HeroContainer } from "./styles"
 
-const Hero = ({heroImage}) => {
+
+const Hero = ({heroImage, pagetitle}) => {
     return (
-        <div>
+        <HeroContainer>
             <GatsbyImage image={heroImage.gatsbyImageData} alt="" />
-        </div>
+        </HeroContainer>
     )
 }
 
