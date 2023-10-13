@@ -6,25 +6,18 @@ import ProductList from "../components/productlist/productList"
 
 
 const ProductListPage = ({data}) => {
-  console.log(data)
-  //const inspectorProps = useContentfulInspectorMode();
-  //const d = useContentfulLiveUpdates({data});
   const products = data.allContentfulProduct.nodes;
   const theme = useContext(ThemeContext);
     return (
       <>
-        <Layout>
-          <div className="page-header">
-            <h1>{data.contentfulProductListPage.title}</h1>
-          </div>
-        <ThemeContext.Provider value="pink">
-          <div className="flex-container">
-          <ProductList products={products}></ProductList>
-          </div>
+        <Layout heroImage={data.contentfulProductListPage.heroImage} pagetitle={data.contentfulProductListPage.title}>
+          <ThemeContext.Provider value="shelter">
+            <div className="flex-container">
+            <ProductList products={products}></ProductList>
+            </div>
         </ThemeContext.Provider>
         </Layout>
       </>
-
     )
 }
 
@@ -34,6 +27,9 @@ export const pageQuery = graphql`
 query plquery {
   contentfulProductListPage {
     title
+    heroImage {
+      gatsbyImageData(height: 300)
+    }
   }
   allContentfulProduct {
     nodes {

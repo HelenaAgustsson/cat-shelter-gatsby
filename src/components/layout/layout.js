@@ -24,10 +24,12 @@ const Layout = ({ heroImage, pagetitle, children }) => {
     <>
     <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata?.title} />
     <div className="container">
+      { heroImage? 
         <TopContainer>
-        { heroImage? <Hero heroImage={heroImage} pagetitle={pagetitle}></Hero>:'' }
-        <TitleContainer><h1>{pagetitle}</h1></TitleContainer>
+          <Hero heroImage={heroImage} pagetitle={pagetitle}></Hero>
+          <TitleContainer><h1>{pagetitle}</h1></TitleContainer>
         </TopContainer>
+      :''}
         {children}</div>
     </>
     

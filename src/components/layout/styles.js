@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import { breakpoint, sizes } from '../theme';
 
 export const HeaderDiv = styled.div`
-    color: #9175a8;
     font-weight: bold;
     border-bottom: 1px solid;
 `;
 
 export const FlexContainer = styled.div`
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 80%;
     display: flex;
     justify-items: space-between;
     align-items: center;
@@ -28,8 +27,7 @@ export const LinksContainer = styled.ul`
 export const TopContainer = styled.div`
     display:flex;
     flex-direction: column;
-    margin-top: 20px;
-    height: 500px;
+    margin: 30px 0;
 
     ${breakpoint.desktop`
         flex-direction: row;

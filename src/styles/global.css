@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import '~sanitize.css';
 
-.page-header h1 {
-  margin: 35px 0;
-  font-size: 50px;
-}
-
 .container {
   margin: auto;
-  max-width: 1000px;
-  
+  max-width: 80%;
 }
 
 .flex-container {
@@ -17,18 +11,13 @@
   flex-wrap: wrap;
 }
 
-.theme-pink {
-  padding-left: 20px;
+.theme-shelter {
   margin-bottom: 25px;
   width: 25%;
 }
 
-.title-container {
-  margin-top: 10px;
-}
-
-.title-container:hover {
-  color: rgb(255, 186, 224)
+.theme-shelter img {
+  width: 80%;
 }
 
 @font-face {
