@@ -9,7 +9,8 @@ const HomePage =({data})=>{
   const pagetitle = data.allContentfulHomepage.nodes[0].pagetitle;
 
   return (
-    <Layout heroImage={img} pagetitle={pagetitle}></Layout>
+    <><Layout heroImage={img} pagetitle={pagetitle}></Layout></>
+    
   )
 }
 

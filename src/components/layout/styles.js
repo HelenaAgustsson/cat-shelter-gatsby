@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { breakpoint, sizes } from '../theme';
 
-export const HeaderDiv = styled.div`
+export const HeaderDiv = styled.header`
     font-weight: bold;
     border-bottom: 1px solid;
     padding: 20px 0;
@@ -11,18 +11,16 @@ export const FlexContainer = styled.div`
     margin: 0 auto;
     max-width: 80%;
     display: flex;
-    justify-items: space-between;
+    justify-content: space-between;
     align-items: center;
 `;
 
 export const LogoContainer = styled.div`
     margin: 0; 
-    flex: 1;
 `;
 
-export const LinksContainer = styled.div`
+export const Nav = styled.div`
     display: flex;
-    
 `;
 
 export const TopContainer = styled.div`
