@@ -6,6 +6,7 @@ import ProductList from "../components/productlist/productList"
 
 
 const ProductListPage = ({data}) => {
+  console.log(data)
     return (
       <Layout>
         <Hero heroImage={data.contentfulProductListPage.heroImage} pagetitle={data.contentfulProductListPage.title}></Hero>

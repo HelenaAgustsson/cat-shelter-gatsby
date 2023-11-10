@@ -12,11 +12,10 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'products',
-        link: '/products'
+        name: 'shop',
+        link: '/shop'
       }
     ]
-      
   },
   plugins: [
     "gatsby-transformer-sharp",
