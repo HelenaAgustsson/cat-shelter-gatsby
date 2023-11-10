@@ -1,12 +1,12 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Hero from "./hero"
 import Header from "./header"
-import { TopContainer, TitleContainer } from "./styles"
+import Footer from "./footer"
+import { LayoutDiv, ContentContainer } from "./styles"
 
 
-const Layout = ({ heroImage, pagetitle, children }) => {
-    const data = useStaticQuery(graphql`
+const Layout = ({children }) => {
+  const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -18,20 +18,14 @@ const Layout = ({ heroImage, pagetitle, children }) => {
         }
       }
     }
-    `)
+  `)
 
    return (
-    <>
-    <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata?.title} />
-    <div className="container">
-      { heroImage? 
-        <TopContainer>
-          <Hero heroImage={heroImage} pagetitle={pagetitle}></Hero>
-          <TitleContainer><h1>{pagetitle}</h1></TitleContainer>
-        </TopContainer>
-      :''}
-        {children}</div>
-    </>
+    <LayoutDiv>
+      <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata?.title} />
+      <ContentContainer>{children}</ContentContainer>
+      <Footer></Footer>
+    </LayoutDiv>
     
    )
 }

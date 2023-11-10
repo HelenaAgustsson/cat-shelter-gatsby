@@ -1,15 +1,22 @@
 import styled from 'styled-components';
-import { breakpoint, sizes } from '../theme';
+
+export const LayoutDiv = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+`
 
 export const HeaderDiv = styled.header`
     font-weight: bold;
     border-bottom: 1px solid;
-    padding: 20px 0;
+    padding-top: 30px;
+    flex-shrink: 0;
 `;
 
 export const FlexContainer = styled.div`
-    margin: 0 auto;
-    max-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,21 +30,15 @@ export const Nav = styled.div`
     display: flex;
 `;
 
-export const TopContainer = styled.div`
-    display:flex;
-    flex-direction: column;
-    margin: 30px 0;
+export const MenuLink = styled.div`
+    padding-left: 20px;
+`;
 
-    ${breakpoint.desktop`
-        flex-direction: row;
-  ` };
-`
+export const ContentContainer = styled.main`
+    flex-grow: 1;
+    flex-shrink: 0;
+`;
 
-export const HeroContainer = styled.div`
-
-`
-
-export const TitleContainer = styled.div`
-    padding: 30px;
-    font-size: 1.2em;
+export const FooterDiv=styled.footer`
+    flex-shrink: 0;
 `;

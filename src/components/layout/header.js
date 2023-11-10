@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { HeaderDiv, FlexContainer, LogoContainer, Nav } from "./styles"
+import { Link } from "gatsby"
+import { HeaderDiv, FlexContainer, LogoContainer, Nav, MenuLink } from "./styles"
 
 const Header = ({ siteTitle, menuLinks }) => (
     <HeaderDiv>
@@ -11,7 +11,7 @@ const Header = ({ siteTitle, menuLinks }) => (
         </LogoContainer>
         <Nav>
           {menuLinks.map(link => (
-            <div style={{paddingLeft:"20px"}}><Link to={link.link} >{link.name}</Link></div>
+            <MenuLink key={link.name}><Link to={link.link} >{link.name}</Link></MenuLink>
           ))}
         </Nav>
       </FlexContainer>
