@@ -4,7 +4,6 @@ import RichText from '../richtext';
 import { FlexContainer, ProductTitle, ProductDetails } from './styles';
 
 const Product =({productData})=>{
-  console.log(productData)
   const title=productData.title;
   const image=productData.image.gatsbyImageData; 
   const alt=productData.alt;

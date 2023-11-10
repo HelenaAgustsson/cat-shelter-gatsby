@@ -1,15 +1,18 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import * as Sentry from '@sentry/gatsby'
+import Hero from '../components/hero/hero'
+// import * as Sentry from '@sentry/gatsby'
 import Layout from '../components/layout/layout'
-import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
+// import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
 const HomePage =({data})=>{
   const img = data.allContentfulHomepage.nodes[0].heroImage;
   const pagetitle = data.allContentfulHomepage.nodes[0].pagetitle;
 
   return (
-    <Layout heroImage={img} pagetitle={pagetitle}></Layout>
+    <Layout>
+       <Hero heroImage={img} pagetitle={pagetitle}></Hero>
+    </Layout>
   )
 }
 

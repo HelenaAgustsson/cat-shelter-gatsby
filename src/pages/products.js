@@ -1,23 +1,17 @@
-import React, {useContext} from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
-import ThemeContext from "../components/themecontext"
+import Hero from "../components/hero/hero"
 import ProductList from "../components/productlist/productList"
 
 
 const ProductListPage = ({data}) => {
-  const products = data.allContentfulProduct.nodes;
-  const theme = useContext(ThemeContext);
     return (
-      <>
-        <Layout heroImage={data.contentfulProductListPage.heroImage} pagetitle={data.contentfulProductListPage.title}>
-          <ThemeContext.Provider value="shelter">
-            <div className="flex-container">
-            <ProductList products={products}></ProductList>
-            </div>
-        </ThemeContext.Provider>
-        </Layout>
-      </>
+      <Layout>
+        <Hero heroImage={data.contentfulProductListPage.heroImage} pagetitle={data.contentfulProductListPage.title}></Hero>
+        <ProductList products={data.allContentfulProduct.nodes}></ProductList>
+      </Layout>
+          
     )
 }
 
@@ -40,7 +34,7 @@ query plquery {
       alt
       sku
       image {
-        gatsbyImageData
+        gatsbyImageData(height: 250, width: 250)
         title
       }
     }

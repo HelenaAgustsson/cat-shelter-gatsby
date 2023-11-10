@@ -1,12 +1,21 @@
-import React, {useContext} from "react"
-import ProductListing from "./productListing"
+import React from "react"
+import { Link } from "gatsby";
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { ProductListContainer, ProductContainer, LinkTitle } from './styles';
 
 const ProductList=({products})=>{
 
-    return products.map((product, index) => (
-        <ProductListing key={index} product={product} ></ProductListing>
-      ));
-    
+    return (
+      <ProductListContainer>
+        {products.map((product, index) => (
+            <ProductContainer key={index}>
+              <Link to={product.slug}><GatsbyImage image={product.image.gatsbyImageData} alt={product.alt} /></Link>
+              <LinkTitle><Link to={product.slug}>{product.title}</Link></LinkTitle>
+            </ProductContainer>
+          ))
+        }
+      </ProductListContainer>
+    )
 }
 
 export default ProductList
