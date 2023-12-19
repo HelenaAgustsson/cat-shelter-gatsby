@@ -23,6 +23,10 @@ query plquery {
   contentfulProductListPage {
     title
     heroImage {
+      description
+        file {
+          url
+        }
       gatsbyImageData(height: 300)
     }
   }

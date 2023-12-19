@@ -15,3 +15,14 @@ export const HeroContainer = styled.div`
         flex-direction: row;
   ` };
 `;
+
+export const ImageContainer = styled.div`
+    width: 800px;
+    height: 300px;
+    background-image: ${({ image, }) => `
+        image-set(
+            url(${image}?fm=avif) type("image/avif")
+        )`};
+    background-position: center;
+    background-size: cover;
+    `;
