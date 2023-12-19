@@ -21,7 +21,8 @@ export const ImageContainer = styled.div`
     height: 300px;
     background-image: ${({ image, }) => `
         image-set(
-            url(${image}?fm=avif) type("image/avif")
+            url(${image}?fm=avif) type("image/avif"),
+            url(${image}) type("image/jpeg")
         )`};
     background-position: center;
     background-size: cover;
