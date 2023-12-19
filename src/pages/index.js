@@ -25,6 +25,10 @@ query {
       contentful_id
       pagetitle
       heroImage {
+        description
+        file {
+          url
+        }
         gatsbyImageData(height: 300)
       }
     }
