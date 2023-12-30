@@ -20,16 +20,3 @@ const Product =({productData})=>{
 }
 
 export default Product;
-
-/*
-export const query = graphql`
-  fragment Product on ContentfulProduct {
-    contentfulProduct(title: {}) {
-        title
-        image {
-          gatsbyImageData
-        }
-      }
-  }
-`
-*/
