@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { HeaderDiv, FlexContainer, LogoContainer, Nav, MenuLink } from "./styles"
+import { HeaderContainer, FlexContainer, LogoContainer, Nav, MenuLink } from "./styles"
 
 const Header = ({ siteTitle, menuLinks }) => (
-    <HeaderDiv>
+    <HeaderContainer>
       <FlexContainer>
         <LogoContainer>
           <Link to="/">{siteTitle}</Link>
@@ -15,7 +15,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           ))}
         </Nav>
       </FlexContainer>
-    </HeaderDiv>
+    </HeaderContainer>
 )
 
 Header.propTypes = {
