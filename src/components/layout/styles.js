@@ -1,19 +1,25 @@
 import styled from 'styled-components';
+import { breakpoint } from '../theme';
 
 export const LayoutDiv = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-`
+`;
 
-export const HeaderDiv = styled.header`
+export const HeaderContainer = styled.header`
+    width: 100%;
+    margin: 0 auto;
     font-weight: bold;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #f1f1f1;
     padding-top: 30px;
+    padding-bottom: 30px;
     flex-shrink: 0;
+
+    ${breakpoint.desktopWide`
+        width: 1170px;
+  ` };
 `;
 
 export const FlexContainer = styled.div`

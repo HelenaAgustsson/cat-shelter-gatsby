@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Hero from '../components/hero/hero'
+import StandardHero from '../components/hero/hero'
 // import * as Sentry from '@sentry/gatsby'
 import Layout from '../components/layout/layout'
 // import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
@@ -11,7 +11,7 @@ const HomePage =({data})=>{
 
   return (
     <Layout>
-       <Hero heroImage={img} pagetitle={pagetitle}></Hero>
+       <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
     </Layout>
   )
 }
