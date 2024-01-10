@@ -15,11 +15,3 @@ const StandardHero = ({heroImage, pagetitle}) => {
 }
 
 export default StandardHero;
-
-/*
- <HeroContainer>
-    <GatsbyImage image={heroImage.gatsbyImageData} alt="hero-image" />
-    <Image image={heroImage} />
-    <TitleContainer><h1>{pagetitle}</h1></TitleContainer>
-</HeroContainer>
-*/
