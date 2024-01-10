@@ -4,6 +4,7 @@ import StandardHero from '../components/hero/hero'
 // import * as Sentry from '@sentry/gatsby'
 import Layout from '../components/layout/layout'
 // import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
+import { Script } from 'gatsby'
 
 const HomePage =({data})=>{
   const img = data.allContentfulHomepage.nodes[0].heroImage;
@@ -11,6 +12,14 @@ const HomePage =({data})=>{
 
   return (
     <Layout>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BL7C5TFCB5"></Script>
+      <Script id="google-analytics-4">
+       {` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BL7C5TFCB5');
+        `}
+      </Script>
        <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
     </Layout>
   )

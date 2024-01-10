@@ -3,12 +3,21 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Hero from "../components/hero/hero"
 import ProductList from "../components/productlist/productList"
+import { Script } from "gatsby"
 
 
 const ProductListPage = ({data}) => {
   console.log(data)
     return (
       <Layout>
+         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BL7C5TFCB5"></Script>
+          <Script id="google-analytics-4">
+          {` window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-BL7C5TFCB5');
+            `}
+          </Script>
         <Hero heroImage={data.contentfulProductListPage.heroImage} pagetitle={data.contentfulProductListPage.title}></Hero>
         <ProductList products={data.allContentfulProduct.nodes}></ProductList>
       </Layout>
