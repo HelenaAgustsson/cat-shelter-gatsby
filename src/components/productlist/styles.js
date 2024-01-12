@@ -14,6 +14,7 @@ export const Container = styled.div`
     display: flex;
     flex-wrap:wrap;
     gap: 40px;
+    justify-content: center;
 `;
 
 export const ProductContainer = styled.div`
