@@ -6,6 +6,11 @@ export const LayoutDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin: 10px;
+
+    ${breakpoint.tablet`
+        margin:0;
+    `}
 `;
 
 export const HeaderContainer = styled.header`
