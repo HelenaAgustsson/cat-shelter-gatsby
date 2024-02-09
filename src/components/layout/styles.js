@@ -55,7 +55,7 @@ export const ContentContainer = styled.main`
 export const FooterDiv = styled.footer`
   flex-shrink: 0;
   width: 100%;
-  margin: 0 auto;
+  margin: 200px auto 0;
   border-top: 1px solid rgb(204, 204, 204);
   padding: 40px 0;
   font-size: 0.8em;
