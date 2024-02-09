@@ -1,8 +1,6 @@
 import React from "react";
 
 const Image = ({image}) => {
-    console.log('image')
-    console.log(image.file.url)
     if(!image) return null;
 
     const {file} = image;
