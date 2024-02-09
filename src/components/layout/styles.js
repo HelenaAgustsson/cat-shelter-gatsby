@@ -52,4 +52,13 @@ export const ContentContainer = styled.main`
 
 export const FooterDiv=styled.footer`
     flex-shrink: 0;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid rgb(204, 204, 204);
+    padding: 40px 0;
+    font-size: 0.8em;
+
+    ${breakpoint.desktopWide`
+    width: 1170px;
+` };
 `;

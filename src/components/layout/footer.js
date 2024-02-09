@@ -3,7 +3,7 @@ import { FooterDiv } from "./styles";
 
 const Footer =()=> {
     return (
-        <FooterDiv>' '</FooterDiv>
+        <FooterDiv>Author: Helena Agustsson</FooterDiv>
     )
 }
 
