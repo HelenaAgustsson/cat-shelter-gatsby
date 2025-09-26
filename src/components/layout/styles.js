@@ -10,8 +10,6 @@ export const LayoutDiv = styled.div`
 `
 
 export const ContentContainer = styled.main`
-  flex-grow: 1;
-  flex-shrink: 0;
   min-height: 100vh;
   position: relative;
 `
@@ -22,10 +20,11 @@ export const NavContainer = styled.div`
   font-size: ${fontSize.small};
   font-weight: bold;
   border-bottom: 1px solid #f1f1f1;
-  padding: ${padding.medium};
+  padding: 0;
 
   ${breakpoint.desktopWide`
         width: ${width.large};
+        padding: ${padding.medium};
   `};
 `
 
@@ -36,8 +35,13 @@ export const FlexContainer = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  padding: ${padding.small};
-  margin: ${margin.small};
+  padding: 0;
+  margin: 0;
+
+  ${breakpoint.tablet`
+    padding: ${padding.small};
+    margin: ${margin.small};
+  `}
 `
 
 export const MenuLink = styled.div`

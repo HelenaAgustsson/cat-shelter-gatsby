@@ -3,7 +3,6 @@ import { breakpoint, fontSize, margin, padding } from '../theme'
 
 export const HeroContainer = styled.div`
   display: flex;
-  margin-bottom: ${margin.small};
   flex-direction: column;
 `
 
@@ -43,8 +42,6 @@ export const Title = styled.h1`
 `
 
 export const MobileTitle = styled.div`
-  margin-bottom: ${margin.small};
-
   ${breakpoint.tablet`
         display:none;
     `}

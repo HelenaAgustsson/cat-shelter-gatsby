@@ -1,5 +1,6 @@
 import React from 'react'
 //import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { SectionDiv } from '../section/styles'
 import {
   HeroContainer,
   Hero,
@@ -17,9 +18,11 @@ const StandardHero = ({ heroImage, pagetitle }) => {
           <Title>{pagetitle}</Title>
         </TitleContainer>
       </Hero>
-      <MobileTitle>
-        <h1>{pagetitle}</h1>
-      </MobileTitle>
+      <SectionDiv>
+        <MobileTitle>
+          <Title>{pagetitle}</Title>
+        </MobileTitle>
+      </SectionDiv>
     </HeroContainer>
   )
 }

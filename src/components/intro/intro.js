@@ -5,7 +5,6 @@ const Intro = ({ data }) => {
   if (data) {
     return (
       <IntroDiv>
-        <IntroHeader>{data.header}</IntroHeader>
         <div>{data.content.content}</div>
       </IntroDiv>
     )
