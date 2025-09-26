@@ -1,7 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { NavContainer, FlexContainer, LogoContainer, MenuLink } from './styles'
+import CTAButton from '../button/CTAButton'
+import {
+  NavContainer,
+  FlexContainer,
+  LogoContainer,
+  MenuLink,
+  ButtonContainer,
+} from './styles'
 
 const SiteNav = ({ siteTitle, menuLinks }) => (
   <NavContainer>
@@ -15,6 +22,9 @@ const SiteNav = ({ siteTitle, menuLinks }) => (
             <Link to={link.link}>{link.name}</Link>
           </MenuLink>
         ))}
+        <ButtonContainer>
+          <CTAButton cta="Donate" />
+        </ButtonContainer>
       </FlexContainer>
     </FlexContainer>
   </NavContainer>
