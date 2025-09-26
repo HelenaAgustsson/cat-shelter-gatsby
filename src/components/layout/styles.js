@@ -1,29 +1,31 @@
 import styled from 'styled-components'
-import { breakpoint } from '../theme'
+import { breakpoint, fontSize, margin, padding, width } from '../theme'
 
 export const LayoutDiv = styled.div`
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  margin: 10px;
+  margin: ${margin.xsmall};
 
   ${breakpoint.tablet`
         margin:0;
     `}
 `
 
-export const HeaderContainer = styled.header`
+export const ContentContainer = styled.main`
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 100vh;
+  position: relative;
+`
+
+export const NavContainer = styled.div`
   width: 100%;
   margin: 0 auto;
+  font-size: ${fontSize.small};
   font-weight: bold;
   border-bottom: 1px solid #f1f1f1;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  flex-shrink: 0;
+  padding: ${padding.medium};
 
   ${breakpoint.desktopWide`
-        width: 1170px;
+        width: ${width.large};
   `};
 `
 
@@ -34,31 +36,26 @@ export const FlexContainer = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  margin: 0;
-`
-
-export const Nav = styled.div`
-  display: flex;
+  padding: ${padding.small};
+  margin: ${margin.small};
 `
 
 export const MenuLink = styled.div`
-  padding-left: 20px;
+  padding: ${padding.small};
+  margin: ${margin.small};
 `
 
-export const ContentContainer = styled.main`
-  flex-grow: 1;
-  flex-shrink: 0;
-  min-height: 100vh;
-  position: relative;
+export const ButtonContainer = styled.div`
+  margin: ${margin.small};
 `
 
 export const FooterDiv = styled.footer`
-  flex-shrink: 0;
   width: 100%;
-  margin: 200px auto 0;
+  margin: ${margin.xlarge} auto;
+  flex-shrink: 0;
+  font-size: ${fontSize.xsmall};
+  padding: ${padding.large} 0;
   border-top: 1px solid rgb(204, 204, 204);
-  padding: 40px 0;
-  font-size: 0.8em;
 
   ${breakpoint.desktopWide`
     width: 1170px;

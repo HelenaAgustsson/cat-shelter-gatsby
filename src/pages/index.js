@@ -1,15 +1,16 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { Script } from 'gatsby'
 import StandardHero from '../components/hero/hero'
 import Layout from '../components/layout/layout'
-import Banner from '../components/banner/banner'
-// import * as Sentry from '@sentry/gatsby'
-// import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
-import { Script } from 'gatsby'
+import Section from '../components/section/section'
+import Intro from '../components/intro/intro'
 
 const HomePage = ({ data }) => {
-  const img = data.allContentfulHomepage.nodes[0].heroImage
-  const pagetitle = data.allContentfulHomepage.nodes[0].pagetitle
+  const pageData = data.contentfulHomepage
+  const img = pageData.heroImage
+  const pagetitle = pageData.pagetitle
+  const campaignSection = pageData.campaignSection
 
   return (
     <Layout>
@@ -25,7 +26,9 @@ const HomePage = ({ data }) => {
         `}
       </Script>
       <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
-      <Banner title="We are here for cats" />
+      <Section>
+        <Intro data={pageData.introBlock} />
+      </Section>
     </Layout>
   )
 }
@@ -34,16 +37,33 @@ export default HomePage
 
 export const pageQuery = graphql`
   query {
-    allContentfulHomepage {
-      nodes {
-        contentful_id
-        pagetitle
-        heroImage {
-          description
-          file {
-            url
+    contentfulHomepage {
+      contentful_id
+      pagetitle
+      heroImage {
+        description
+        file {
+          url
+        }
+      }
+      introBlock {
+        header
+        content {
+          content
+        }
+      }
+      campaignSection {
+        header
+        listItems {
+          header
+          textContent {
+            textContent
           }
-          gatsbyImageData(height: 300)
+          image {
+            file {
+              url
+            }
+          }
         }
       }
     }
