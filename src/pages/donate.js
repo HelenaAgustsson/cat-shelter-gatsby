@@ -6,11 +6,10 @@ import Layout from '../components/layout/layout'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
 
-const HomePage = ({ data }) => {
-  const pageData = data.contentfulHomepage
+const DonatePage = ({ data }) => {
+  const pageData = data.contentfulDonatePage
   const img = pageData.heroImage
   const pagetitle = pageData.pagetitle
-  const campaignSection = pageData.campaignSection
 
   return (
     <Layout>
@@ -33,12 +32,11 @@ const HomePage = ({ data }) => {
   )
 }
 
-export default HomePage
+export default DonatePage
 
 export const pageQuery = graphql`
   query {
-    contentfulHomepage {
-      contentful_id
+    contentfulDonatePage {
       pagetitle
       heroImage {
         description
@@ -50,20 +48,6 @@ export const pageQuery = graphql`
         header
         content {
           content
-        }
-      }
-      campaignSection {
-        header
-        listItems {
-          header
-          textContent {
-            textContent
-          }
-          image {
-            file {
-              url
-            }
-          }
         }
       }
     }

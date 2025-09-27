@@ -1,11 +1,10 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import Footer from "./footer"
-import { LayoutDiv, ContentContainer } from "./styles"
+import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import SiteNav from './sitenav'
+import Footer from './footer'
+import { LayoutDiv, ContentContainer } from './styles'
 
-
-const Layout = ({children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,14 +19,16 @@ const Layout = ({children }) => {
     }
   `)
 
-   return (
+  return (
     <LayoutDiv>
-      <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata?.title} />
+      <SiteNav
+        menuLinks={data.site.siteMetadata.menuLinks}
+        siteTitle={data.site.siteMetadata?.title}
+      />
       <ContentContainer>{children}</ContentContainer>
       <Footer></Footer>
     </LayoutDiv>
-    
-   )
+  )
 }
 
-export default Layout;
+export default Layout

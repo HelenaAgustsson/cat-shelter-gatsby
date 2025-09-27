@@ -1,15 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Script } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
-import PageTitle from '../components/pagetitle/pagetitle'
-import ProductList from '../components/productlist/productList'
-import { Script } from 'gatsby'
+import ProductList from '../components/products/productlist/productList'
+import Section from '../components/section/section'
+import Intro from '../components/intro/intro'
 
 const ProductListPage = ({ data }) => {
-  const pagetitle = data.contentfulProductListPage.title
-  const heroImage = data.contentfulProductListPage.heroImage
+  const pageData = data.contentfulProductListPage
   const products = data.allContentfulProduct.nodes
+
   return (
     <Layout>
       <Script
@@ -23,8 +24,10 @@ const ProductListPage = ({ data }) => {
                 gtag('config', 'G-BL7C5TFCB5');
             `}
       </Script>
-      <Hero heroImage={heroImage} pagetitle={pagetitle}></Hero>
-      <PageTitle pagetitle={pagetitle}></PageTitle>
+      <Hero heroImage={pageData.heroImage} pagetitle={pageData.title}></Hero>
+      <Section>
+        <Intro data={pageData.introBlock} />
+      </Section>
       <ProductList products={products}></ProductList>
     </Layout>
   )
@@ -43,7 +46,14 @@ export const pageQuery = graphql`
         }
         gatsbyImageData(height: 300)
       }
+      introBlock {
+        header
+        content {
+          content
+        }
+      }
     }
+
     allContentfulProduct {
       nodes {
         contentful_id
