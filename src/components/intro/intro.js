@@ -1,5 +1,5 @@
 import React from 'react'
-import { IntroDiv, IntroHeader } from './styles'
+import { IntroDiv } from './styles'
 
 const Intro = ({ data }) => {
   if (data) {
@@ -12,20 +12,3 @@ const Intro = ({ data }) => {
 }
 
 export default Intro
-
-/*
-  const data = useStaticQuery(graphql`
-    query ContentBlockQuery($id: String!) {
-      allContentfulContentBlockBasic(filter: { contentful_id: { eq: $id } }) {
-        edges {
-          node {
-            blockTitle
-            blockContent {
-              blockContent
-            }
-          }
-        }
-      }
-    }
-  `)
-*/

@@ -1,13 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import {
-  Section,
-  SectionTitle,
-  Container,
-  ProductContainer,
-  LinkTitle,
-} from './styles'
+import { Section, Container, ProductContainer, LinkTitle } from './styles'
 
 const ProductList = ({ products }) => {
   return (

@@ -9,6 +9,8 @@ import {
   MenuLink,
   ButtonContainer,
 } from './styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const SiteNav = ({ siteTitle, menuLinks }) => (
   <NavContainer>
@@ -25,6 +27,7 @@ const SiteNav = ({ siteTitle, menuLinks }) => (
         <ButtonContainer>
           <CTAButton cta="Donate" />
         </ButtonContainer>
+        <FontAwesomeIcon icon={faBars} />
       </FlexContainer>
     </FlexContainer>
   </NavContainer>
