@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import SiteNav from './sitenav'
+import SiteNav from '../navigation/sitenav'
 import Footer from './footer'
 import { LayoutDiv, ContentContainer } from './styles'
 
