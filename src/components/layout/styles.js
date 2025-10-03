@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint, fontSize, margin, padding } from '../theme'
+import { breakpoint, fontSize, margin, padding, width } from '../theme'
 
 export const LayoutDiv = styled.div`
   margin: ${margin.xsmall};
@@ -11,11 +11,13 @@ export const LayoutDiv = styled.div`
 export const ContentContainer = styled.main`
   min-height: 100vh;
   position: relative;
-  margin-top: 20px;
+  margin: 20px;
+  width: 100%;
 
-  ${breakpoint.tablet`
-    margin-top:0;
-  `}
+  ${breakpoint.desktopWide`
+      width: ${width.large};
+      margin: ${margin.medium} auto;
+  `};
 `
 
 export const FooterDiv = styled.footer`

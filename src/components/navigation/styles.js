@@ -9,7 +9,7 @@ export const NavContainer = styled.div`
 
   ${breakpoint.desktopWide`
       width: ${width.large};
-      padding: ${padding.medium};
+      padding: ${padding.medium} auto;
   `};
 `
 
@@ -19,8 +19,10 @@ export const LogoContainer = styled.div`
   margin: 0;
 
   ${breakpoint.tablet`
-    padding: ${padding.small};
-    margin: ${margin.small};
+    padding-bottom: ${padding.small};
+    margin-bottom: ${margin.small};
+    padding-top: ${padding.small};
+    margin-top: ${margin.small};
   `}
 `
 
