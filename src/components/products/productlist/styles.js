@@ -10,10 +10,6 @@ export const Section = styled.section`
   `};
 `
 
-export const SectionTitle = styled.h3`
-  font-size: ${fontSize.medium};
-`
-
 export const Container = styled.div`
   text-align: center;
   display: flex;

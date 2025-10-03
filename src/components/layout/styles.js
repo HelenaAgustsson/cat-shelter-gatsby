@@ -1,56 +1,21 @@
 import styled from 'styled-components'
-import { breakpoint, fontSize, margin, padding, width } from '../theme'
+import { breakpoint, fontSize, margin, padding } from '../theme'
 
 export const LayoutDiv = styled.div`
   margin: ${margin.xsmall};
 
   ${breakpoint.tablet`
-        margin:0;
-    `}
+     margin:0;
+  `}
 `
-
 export const ContentContainer = styled.main`
   min-height: 100vh;
   position: relative;
-`
-
-export const NavContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  font-size: ${fontSize.small};
-  font-weight: bold;
-  border-bottom: 1px solid #f1f1f1;
-  padding: 0;
-
-  ${breakpoint.desktopWide`
-        width: ${width.large};
-        padding: ${padding.medium};
-  `};
-`
-
-export const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-export const LogoContainer = styled.div`
-  padding: 0;
-  margin: 0;
+  margin-top: 20px;
 
   ${breakpoint.tablet`
-    padding: ${padding.small};
-    margin: ${margin.small};
+    margin-top:0;
   `}
-`
-
-export const MenuLink = styled.div`
-  padding: ${padding.small};
-  margin: ${margin.small};
-`
-
-export const ButtonContainer = styled.div`
-  margin: ${margin.small};
 `
 
 export const FooterDiv = styled.footer`

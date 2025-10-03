@@ -10,7 +10,7 @@ const HomePage = ({ data }) => {
   const pageData = data.contentfulHomepage
   const img = pageData.heroImage
   const pagetitle = pageData.pagetitle
-  const campaignSection = pageData.campaignSection
+  // const campaignSection = pageData.campaignSection
 
   return (
     <Layout>

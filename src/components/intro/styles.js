@@ -11,5 +11,3 @@ export const IntroDiv = styled.div`
         margin-top: 50px;
   `}
 `
-
-export const IntroHeader = styled.h2``
