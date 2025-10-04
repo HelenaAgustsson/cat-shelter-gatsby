@@ -8,8 +8,8 @@ module.exports = {
     description: 'A home for every cat in need',
     menuLinks: [
       {
-        name: 'home',
-        link: '/',
+        name: 'adopt',
+        link: '/adopt',
       },
       {
         name: 'shop',
