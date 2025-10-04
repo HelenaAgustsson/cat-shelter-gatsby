@@ -74,6 +74,11 @@ export const margin = {
 export const width = {
   medium: '744px',
   large: '1170px',
+  desktopWide: 1170,
+  desktop: 992,
+  tablet: 641,
+  mobileLand: 512,
+  mobile: 359,
 }
 
 // sensible default device breakpoints exported for chromatic VRT
