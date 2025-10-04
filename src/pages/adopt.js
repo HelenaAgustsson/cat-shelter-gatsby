@@ -2,13 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
-import ProductList from '../components/products/productlist/productList'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
 
-const ProductListPage = ({ data }) => {
-  const pageData = data.contentfulProductListPage
-  const products = data.allContentfulProduct.nodes
+const AdoptPage = ({ data }) => {
+  const pageData = data.contentfulAdoptPage
 
   return (
     <Layout>
@@ -16,16 +14,15 @@ const ProductListPage = ({ data }) => {
       <Section>
         <Intro data={pageData.introBlock} />
       </Section>
-      <ProductList products={products}></ProductList>
     </Layout>
   )
 }
 
-export default ProductListPage
+export default AdoptPage
 
 export const pageQuery = graphql`
   query plquery {
-    contentfulProductListPage {
+    contentfulAdoptPage {
       title
       heroImage {
         description
@@ -38,21 +35,6 @@ export const pageQuery = graphql`
         header
         content {
           content
-        }
-      }
-    }
-
-    allContentfulProduct {
-      nodes {
-        contentful_id
-        title
-        slug
-        categories
-        alt
-        sku
-        image {
-          gatsbyImageData(height: 250, width: 250)
-          title
         }
       }
     }
