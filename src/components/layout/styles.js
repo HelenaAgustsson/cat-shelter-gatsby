@@ -11,12 +11,12 @@ export const LayoutDiv = styled.div`
 export const ContentContainer = styled.main`
   min-height: 100vh;
   position: relative;
-  margin: 20px;
+  padding: 20px;
   width: 100%;
 
   ${breakpoint.desktopWide`
-      width: ${width.large};
-      margin: ${margin.medium} auto;
+    width: ${width.large};
+    margin: ${margin.medium} auto;
   `};
 `
 

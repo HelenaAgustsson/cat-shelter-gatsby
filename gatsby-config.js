@@ -1,27 +1,35 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
-    title: "The Cat Shelter",
-    description: "A home for every cat in need",
-    menuLinks:[
+    title: 'The Cat Shelter',
+    description: 'A home for every cat in need',
+    menuLinks: [
       {
         name: 'home',
-        link: '/'
+        link: '/',
       },
       {
         name: 'shop',
-        link: '/shop'
-      }
-    ]
+        link: '/shop',
+      },
+    ],
   },
   plugins: [
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: `gatsby-plugin-image`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -29,15 +37,15 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: process.env.CONTENTFUL_HOST
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     {
-      resolve: "@sentry/gatsby",
-    }
+      resolve: '@sentry/gatsby',
+    },
   ],
-};
+}

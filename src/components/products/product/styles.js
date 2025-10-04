@@ -12,13 +12,30 @@ export const BackLink = styled(Link)`
 `
 
 export const FlexContainer = styled.div`
+  margin-top: ${margin.medium};
   width: 100%;
   display: flex;
-  margin-top: ${margin.medium};
+  flex-direction: column;
+
+  ${breakpoint.tablet`
+    flex-direction:row;
+  `}
+`
+
+export const ImageContainer = styled.div`
+  width: 80%;
+
+  ${breakpoint.tablet`
+      width:300px; 
+  `}
 `
 
 export const ProductDetails = styled.div`
-  padding: 0 ${padding.medium};
+  padding: ${padding.medium} 0;
+
+  ${breakpoint.tablet`
+    padding: 0 ${padding.medium};
+  `}
 `
 
 export const ProductTitle = styled.h2`

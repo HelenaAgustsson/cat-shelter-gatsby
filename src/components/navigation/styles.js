@@ -6,10 +6,11 @@ export const NavContainer = styled.div`
   margin: 0 auto;
   font-size: ${fontSize.small};
   font-weight: bold;
+  padding: ${padding.medium};
 
   ${breakpoint.desktopWide`
-      width: ${width.large};
-      padding: ${padding.medium} auto;
+    width: ${width.large};
+    padding: ${padding.medium} auto;
   `};
 `
 
@@ -31,7 +32,7 @@ export const BarsContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  padding-top: 10px;
+  padding-top: 30px;
   padding-right: 10px;
 
   ${breakpoint.tablet`
@@ -53,7 +54,7 @@ export const MobileMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: right;
+  text-align: center;
 
   ${breakpoint.tablet`
     display:none
