@@ -5,8 +5,8 @@ import Hero from '../components/hero/hero'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
 
-const ProductListPage = ({ data }) => {
-  const pageData = data.contentfulProductListPage
+const AdoptPage = ({ data }) => {
+  const pageData = data.contentfulAdoptPage
 
   return (
     <Layout>
@@ -18,11 +18,11 @@ const ProductListPage = ({ data }) => {
   )
 }
 
-export default ProductListPage
+export default AdoptPage
 
 export const pageQuery = graphql`
   query plquery {
-    contentfulProductListPage {
+    contentfulAdoptPage {
       title
       heroImage {
         description
