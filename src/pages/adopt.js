@@ -4,9 +4,11 @@ import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
+import ProfileList from '../components/profiles/profileList'
 
 const AdoptPage = ({ data }) => {
   const pageData = data.contentfulAdoptPage
+  const profiles = data.allContentfulProfile.nodes
 
   return (
     <Layout>
@@ -14,6 +16,7 @@ const AdoptPage = ({ data }) => {
       <Section>
         <Intro data={pageData.introBlock} />
       </Section>
+      <ProfileList profiles={profiles} />
     </Layout>
   )
 }
@@ -35,6 +38,18 @@ export const pageQuery = graphql`
         header
         content {
           content
+        }
+      }
+    }
+
+    allContentfulProfile {
+      nodes {
+        title
+        slug
+        image {
+          gatsbyImageData(height: 250, width: 250)
+          title
+          description
         }
       }
     }

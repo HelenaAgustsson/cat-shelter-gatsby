@@ -53,6 +53,7 @@ export const pageQuery = graphql`
         image {
           gatsbyImageData(height: 250, width: 250)
           title
+          description
         }
       }
     }

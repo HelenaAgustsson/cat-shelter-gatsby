@@ -12,7 +12,7 @@ const ProductList = ({ products }) => {
             <Link to={product.slug}>
               <GatsbyImage
                 image={product.image.gatsbyImageData}
-                alt={product.alt}
+                alt={product.image.description}
               />
             </Link>
             <LinkTitle>
