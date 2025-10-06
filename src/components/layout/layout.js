@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import SiteNav from '../navigation/sitenav'
 import Footer from './footer'
-import { LayoutDiv, ContentContainer } from './styles'
+import { LayoutDiv, PageContainer } from './styles'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata?.title}
       />
-      <ContentContainer>{children}</ContentContainer>
+      <PageContainer>{children}</PageContainer>
       <Footer></Footer>
     </LayoutDiv>
   )

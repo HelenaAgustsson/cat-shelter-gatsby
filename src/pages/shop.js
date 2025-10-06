@@ -5,6 +5,7 @@ import Hero from '../components/hero/hero'
 import ProductList from '../components/products/productlist/productList'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
+import ContentContainer from '../components/ContentContainer/contentcontainer'
 
 const ProductListPage = ({ data }) => {
   const pageData = data.contentfulProductListPage
@@ -13,10 +14,14 @@ const ProductListPage = ({ data }) => {
   return (
     <Layout>
       <Hero heroImage={pageData.heroImage} pagetitle={pageData.title}></Hero>
-      <Section>
-        <Intro data={pageData.introBlock} />
-      </Section>
-      <ProductList products={products}></ProductList>
+      <ContentContainer>
+        <Section>
+          <Intro data={pageData.introBlock} />
+        </Section>
+        <Section>
+          <ProductList products={products}></ProductList>
+        </Section>
+      </ContentContainer>
     </Layout>
   )
 }

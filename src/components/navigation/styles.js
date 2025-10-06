@@ -6,11 +6,14 @@ export const NavContainer = styled.div`
   margin: 0 auto;
   font-size: ${fontSize.small};
   font-weight: bold;
-  padding: ${padding.medium};
+  padding: ${padding.medium} 0;
+
+  ${breakpoint.tablet`
+    padding: 0;  
+  `}
 
   ${breakpoint.desktopWide`
-    width: ${width.large};
-    padding: ${padding.medium} auto;
+    max-width: ${width.large};
   `};
 `
 
@@ -20,10 +23,8 @@ export const LogoContainer = styled.div`
   margin: 0;
 
   ${breakpoint.tablet`
-    padding-bottom: ${padding.small};
-    margin-bottom: ${margin.small};
-    padding-top: ${padding.small};
-    margin-top: ${margin.small};
+    padding: ${padding.small} 0;
+    margin: ${margin.small} 0;
   `}
 `
 
@@ -32,8 +33,8 @@ export const BarsContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  padding-top: 30px;
-  padding-right: 10px;
+  padding-top: 40px;
+  padding-right: ${padding.medium};
 
   ${breakpoint.tablet`
     display:none;
@@ -54,16 +55,21 @@ export const MobileMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  margin-top: ${margin.small};
 
   ${breakpoint.tablet`
     display:none
-  `}
+  `};
 `
 
 export const MenuLink = styled.div`
   padding: ${padding.small};
   margin: ${margin.small};
+
+  ${breakpoint.tablet`
+    margin: ${margin.small};
+  `}
 `
 
 export const FlexContainer = styled.div`
@@ -73,4 +79,8 @@ export const FlexContainer = styled.div`
 
 export const ButtonContainer = styled.div`
   margin: ${margin.small};
+
+  ${breakpoint.tablet`
+      margin-right: 0;
+  `}
 `

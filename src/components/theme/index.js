@@ -50,9 +50,9 @@ export const sizes = {
 }
 
 export const fontSize = {
-  xsmall: '12px',
-  small: '18px',
-  medium: '24px',
+  xsmall: '18px',
+  small: '20px',
+  medium: '22px',
   large: '40px',
 }
 
@@ -61,6 +61,7 @@ export const padding = {
   small: '10px',
   medium: '20px',
   large: '30px',
+  xlarge: '50px',
 }
 
 export const margin = {
@@ -74,11 +75,6 @@ export const margin = {
 export const width = {
   medium: '744px',
   large: '1170px',
-  desktopWide: 1170,
-  desktop: 992,
-  tablet: 641,
-  mobileLand: 512,
-  mobile: 359,
 }
 
 // sensible default device breakpoints exported for chromatic VRT
