@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { breakpoint } from '../theme'
+import { breakpoint, margin } from '../theme'
 
 export const SectionDiv = styled.div`
-  margin: 0 20px;
+  margin-top: ${margin.small};
+  margin-bottom: ${margin.large};
 
-  ${breakpoint.desktopWide`
-    width: 1170px;
-    margin: auto;
-  `};
+  ${breakpoint.tablet`
+    margin-top: ${margin.large};
+  `}
 `

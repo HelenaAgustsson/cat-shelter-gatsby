@@ -2,22 +2,11 @@ import styled from 'styled-components'
 import { breakpoint, fontSize, margin, padding, width } from '../theme'
 
 export const LayoutDiv = styled.div`
-  margin: ${margin.xsmall};
-
-  ${breakpoint.tablet`
-     margin:0;
-  `}
+  padding: ${padding.medium};
 `
-export const ContentContainer = styled.main`
+export const PageContainer = styled.main`
   min-height: 100vh;
   position: relative;
-  padding: 20px;
-  width: 100%;
-
-  ${breakpoint.desktopWide`
-    width: ${width.large};
-    margin: ${margin.medium} auto;
-  `};
 `
 
 export const FooterDiv = styled.footer`
@@ -29,6 +18,6 @@ export const FooterDiv = styled.footer`
   border-top: 1px solid rgb(204, 204, 204);
 
   ${breakpoint.desktopWide`
-    width: 1170px;
+    width: ${width.large}
 `};
 `

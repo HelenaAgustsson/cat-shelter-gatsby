@@ -1,14 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint, padding, fontSize, width } from '../theme'
-
-export const Section = styled.section`
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  ${breakpoint.desktopWide`
-        width: ${width.large};
-  `};
-`
+import { padding, fontSize } from '../theme'
 
 export const Container = styled.div`
   text-align: center;

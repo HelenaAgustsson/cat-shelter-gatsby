@@ -3,11 +3,7 @@ import { IntroDiv } from './styles'
 
 const Intro = ({ data }) => {
   if (data) {
-    return (
-      <IntroDiv>
-        <div>{data.content.content}</div>
-      </IntroDiv>
-    )
+    return <IntroDiv>{data.content.content}</IntroDiv>
   }
 }
 

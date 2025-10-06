@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import StandardHero from '../components/hero/hero'
 import Layout from '../components/layout/layout'
+import StandardHero from '../components/hero/hero'
+import ContentContainer from '../components/ContentContainer/contentcontainer'
 import Section from '../components/section/section'
 import Intro from '../components/intro/intro'
 
@@ -14,9 +15,11 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
-      <Section>
-        <Intro data={pageData.introBlock} />
-      </Section>
+      <ContentContainer>
+        <Section>
+          <Intro data={pageData.introBlock} />
+        </Section>
+      </ContentContainer>
     </Layout>
   )
 }

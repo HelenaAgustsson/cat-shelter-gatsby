@@ -33,8 +33,8 @@ export const TitleContainer = styled.div`
   border-radius: 5px;
 
   ${breakpoint.tablet`
-        display: flex;
-    `}
+    display: flex;
+  `}
 `
 
 export const Title = styled.h1`
@@ -42,7 +42,8 @@ export const Title = styled.h1`
 `
 
 export const MobileTitle = styled.div`
+  padding-left: ${padding.medium};
   ${breakpoint.tablet`
-        display:none;
-    `}
+    display:none;
+  `};
 `
