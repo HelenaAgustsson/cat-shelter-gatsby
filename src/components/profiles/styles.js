@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { padding, fontSize, colors } from '../theme'
+import { padding, fontSize, fontWeight, colors } from '../theme'
 
 export const Container = styled.div`
   text-align: center;
@@ -24,4 +24,5 @@ export const ImageContainer = styled.div`
 export const TitleContainer = styled.div`
   font-size: ${fontSize.small};
   padding: ${padding.small} 0;
+  font-weight: ${fontWeight.medium};
 `

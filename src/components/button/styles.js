@@ -12,7 +12,7 @@ const DefaultButton = styled.button`
   text-align: center;
   color: #ffffff;
 
-  &hover {
+  &:hover {
     background: ${colors.red85};
   }
 `

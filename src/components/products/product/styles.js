@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { breakpoint, padding, margin, width } from '../../theme'
+import { breakpoint, padding, margin, fontWeight } from '../../theme'
 
 export const ProductContainer = styled.div``
 
@@ -40,4 +40,5 @@ export const ProductDetails = styled.div`
 
 export const ProductTitle = styled.h2`
   margin-top: 0;
+  font-weight: ${fontWeight.medium};
 `
