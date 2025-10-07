@@ -4,6 +4,7 @@ import React from 'react'
 import {
   HeroContainer,
   Hero,
+  BackgroundContainer,
   TitleContainer,
   Title,
   MobileTitle,
@@ -14,9 +15,11 @@ const StandardHero = ({ heroImage, pagetitle }) => {
   return (
     <HeroContainer>
       <Hero $image={heroImage.file.url}>
-        <TitleContainer>
-          <Title>{pagetitle}</Title>
-        </TitleContainer>
+        <BackgroundContainer>
+          <TitleContainer>
+            <Title>{pagetitle}</Title>
+          </TitleContainer>
+        </BackgroundContainer>
       </Hero>
       <MobileTitle>
         <Title>{pagetitle}</Title>

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import RichText from '../../richtext'
+import Section from '../../section/section'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import {
-  ProductContainer,
   LinkContainer,
   BackLink,
   ImageContainer,
@@ -19,7 +19,7 @@ const Product = ({ productData }) => {
   const alt = productData.alt
 
   return (
-    <ProductContainer>
+    <Section>
       <LinkContainer>
         <FontAwesomeIcon icon={faArrowLeft} className="fa-thin" />
         <BackLink to="/shop">Back to Product Listings</BackLink>
@@ -33,7 +33,7 @@ const Product = ({ productData }) => {
           <RichText richText={productData.description} />
         </ProductDetails>
       </FlexContainer>
-    </ProductContainer>
+    </Section>
   )
 }
 
