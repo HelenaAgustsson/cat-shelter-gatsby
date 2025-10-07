@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { breakpoint, padding, margin, fontWeight } from '../../theme'
 
-export const ProductContainer = styled.div``
-
 export const LinkContainer = styled.div``
 
 export const BackLink = styled(Link)`
