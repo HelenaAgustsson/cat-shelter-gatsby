@@ -56,6 +56,10 @@ export const fontSize = {
   large: '40px',
 }
 
+export const fontWeight = {
+  medium: '600',
+}
+
 export const padding = {
   xsmall: '5px',
   small: '10px',

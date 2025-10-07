@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { padding, fontSize } from '../theme'
+import { padding, fontSize, fontWeight, colors } from '../theme'
 
 export const Container = styled.div`
   text-align: center;
@@ -12,6 +12,8 @@ export const Container = styled.div`
 export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
+  border: solid 1px ${colors.grey20};
+  border-radius: 5px;
 `
 
 export const ImageContainer = styled.div`
@@ -21,5 +23,6 @@ export const ImageContainer = styled.div`
 
 export const TitleContainer = styled.div`
   font-size: ${fontSize.small};
-  padding-top: ${padding.small};
+  padding: ${padding.small} 0;
+  font-weight: ${fontWeight.medium};
 `
