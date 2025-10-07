@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint, fontSize, margin, padding, width } from '../theme'
+import { breakpoint, fontSize, padding, width } from '../theme'
 
 export const LayoutDiv = styled.div`
   padding: ${padding.medium};
@@ -11,7 +11,7 @@ export const PageContainer = styled.main`
 
 export const FooterDiv = styled.footer`
   width: 100%;
-  margin: ${margin.xlarge} auto;
+  margin: 200px auto 0 auto;
   flex-shrink: 0;
   font-size: ${fontSize.xsmall};
   padding: ${padding.large} 0;

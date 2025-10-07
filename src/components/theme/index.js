@@ -42,6 +42,7 @@ export const colors = {
 }
 
 export const sizes = {
+  monitor: 1210,
   desktopWide: 1170,
   desktop: 992,
   tablet: 641,
@@ -74,6 +75,7 @@ export const margin = {
   medium: '30px',
   large: '50px',
   xlarge: '70px',
+  xxlarge: '100px',
 }
 
 export const width = {
