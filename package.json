@@ -7,6 +7,9 @@
   "bugs": {
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "dependencies": {
     "@contentful/live-preview": "^2.10.1",
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
@@ -40,6 +43,7 @@
     "@testing-library/react": "^14.1.0",
     "contentful-import": "^8.3.2",
     "gatsby-provision-contentful": "^0.0.5",
+    "jest-environment-jsdom": "^29.7.0",
     "netlify-cli": "^10.0.0"
   },
   "engines": {
@@ -60,6 +64,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "test": "jest",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "postinstall": "node ./bin/hello.js",
