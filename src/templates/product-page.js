@@ -3,12 +3,14 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
 import Product from '../components/products/product/product'
+import SiteLink from '../components/sitelink/sitelink'
 
 const productPage = ({ data }) => {
   const ppdata = data.contentfulProduct
   return (
     <Layout>
       <ContentContainer>
+        <SiteLink link="/shop" linkText="Back to shop" />
         <Product productData={ppdata} contentful_id={ppdata.contentful_id} />
       </ContentContainer>
     </Layout>

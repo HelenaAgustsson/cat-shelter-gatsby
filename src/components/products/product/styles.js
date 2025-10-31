@@ -1,13 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { breakpoint, padding, margin, fontWeight } from '../../theme'
-
-export const LinkContainer = styled.div``
-
-export const BackLink = styled(Link)`
-  text-decoration: underline;
-  margin-left: 10px;
-`
 
 export const FlexContainer = styled.div`
   margin-top: ${margin.medium};
