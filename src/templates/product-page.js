@@ -2,14 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
-import Product from '../components/products/product/product'
+import Product from '../components/product/product'
+import SiteLink from '../components/sitelink/sitelink'
 
 const productPage = ({ data }) => {
   const ppdata = data.contentfulProduct
+
   return (
     <Layout>
       <ContentContainer>
-        <Product productData={ppdata} contentful_id={ppdata.contentful_id} />
+        <SiteLink link="/shop" linkText="Back to shop" />
+        <Product productData={ppdata} />
       </ContentContainer>
     </Layout>
   )
@@ -25,8 +28,8 @@ export const pageQuery = graphql`
       slug
       title
       alt
-      description {
-        raw
+      details {
+        details
       }
       image {
         gatsbyImageData

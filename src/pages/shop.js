@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
-import ProductList from '../components/products/productlist/productList'
 import Section from '../components/section/section'
+import Grid from '../components/grid/grid'
 import TextBlock from '../components/textblock/textblock'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
 
@@ -19,7 +19,7 @@ const ProductListPage = ({ data }) => {
           <TextBlock data={pageData.textBlock} />
         </Section>
         <Section>
-          <ProductList products={products}></ProductList>
+          <Grid items={products} />
         </Section>
       </ContentContainer>
     </Layout>
@@ -52,9 +52,7 @@ export const pageQuery = graphql`
         contentful_id
         title
         slug
-        categories
         alt
-        sku
         image {
           gatsbyImageData(height: 250, width: 250)
           title
