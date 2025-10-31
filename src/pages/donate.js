@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
 import StandardHero from '../components/hero/hero'
 import Section from '../components/section/section'
-import Intro from '../components/intro/intro'
+import TextBlock from '../components/textblock/textblock'
 
 const DonatePage = ({ data }) => {
   const pageData = data.contentfulDonatePage
@@ -16,7 +16,7 @@ const DonatePage = ({ data }) => {
       <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
       <ContentContainer>
         <Section>
-          <Intro data={pageData.introBlock} />
+          <TextBlock data={pageData.textBlock} />
         </Section>
       </ContentContainer>
     </Layout>
@@ -35,7 +35,7 @@ export const pageQuery = graphql`
           url
         }
       }
-      introBlock {
+      textBlock {
         header
         content {
           content

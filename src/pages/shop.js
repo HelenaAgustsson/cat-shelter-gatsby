@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
 import ProductList from '../components/products/productlist/productList'
 import Section from '../components/section/section'
-import Intro from '../components/intro/intro'
+import TextBlock from '../components/textblock/textblock'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
 
 const ProductListPage = ({ data }) => {
@@ -16,7 +16,7 @@ const ProductListPage = ({ data }) => {
       <Hero heroImage={pageData.heroImage} pagetitle={pageData.title}></Hero>
       <ContentContainer>
         <Section>
-          <Intro data={pageData.introBlock} />
+          <TextBlock data={pageData.textBlock} />
         </Section>
         <Section>
           <ProductList products={products}></ProductList>
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
         }
         gatsbyImageData(height: 300)
       }
-      introBlock {
+      textBlock {
         header
         content {
           content
