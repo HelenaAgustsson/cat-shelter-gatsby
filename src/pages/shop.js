@@ -52,9 +52,7 @@ export const pageQuery = graphql`
         contentful_id
         title
         slug
-        categories
         alt
-        sku
         image {
           gatsbyImageData(height: 250, width: 250)
           title

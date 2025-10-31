@@ -7,11 +7,12 @@ import SiteLink from '../components/sitelink/sitelink'
 
 const productPage = ({ data }) => {
   const ppdata = data.contentfulProduct
+
   return (
     <Layout>
       <ContentContainer>
         <SiteLink link="/shop" linkText="Back to shop" />
-        <Product productData={ppdata} contentful_id={ppdata.contentful_id} />
+        <Product productData={ppdata} />
       </ContentContainer>
     </Layout>
   )
@@ -27,8 +28,8 @@ export const pageQuery = graphql`
       slug
       title
       alt
-      description {
-        raw
+      details {
+        details
       }
       image {
         gatsbyImageData
