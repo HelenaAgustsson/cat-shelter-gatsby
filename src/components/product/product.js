@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import RichText from '../../richtext'
-import Section from '../../section/section'
+import RichText from '../richtext'
+import Section from '../section/section'
 import {
   ImageContainer,
   FlexContainer,
   ProductTitle,
   ProductDetails,
-} from './styles'
+} from '../product/styles'
 
 const Product = ({ productData }) => {
   const title = productData.title

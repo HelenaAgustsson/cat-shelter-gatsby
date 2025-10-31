@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import ContentContainer from '../components/ContentContainer/contentcontainer'
-import Product from '../components/products/product/product'
+import Product from '../components/product/product'
 import SiteLink from '../components/sitelink/sitelink'
 
 const productPage = ({ data }) => {

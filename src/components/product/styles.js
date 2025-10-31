@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint, padding, margin, fontWeight } from '../../theme'
+import { breakpoint, padding, margin, fontWeight } from '../theme'
 
 export const FlexContainer = styled.div`
   margin-top: ${margin.medium};

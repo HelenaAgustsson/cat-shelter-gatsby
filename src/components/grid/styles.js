@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { padding, fontSize, fontWeight } from '../../theme'
+import { padding, fontSize, fontWeight } from '../theme'
 
 export const Container = styled.div`
   text-align: center;
@@ -9,12 +9,12 @@ export const Container = styled.div`
   justify-content: center;
 `
 
-export const ProductContainer = styled.div`
+export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const LinkTitle = styled.div`
+export const ItemTitle = styled.div`
   font-size: ${fontSize.small};
   padding-top: ${padding.small};
   font-weight: ${fontWeight.medium};
