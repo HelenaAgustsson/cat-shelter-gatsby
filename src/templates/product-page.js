@@ -31,6 +31,9 @@ export const pageQuery = graphql`
       details {
         details
       }
+      description {
+        raw
+      }
       image {
         gatsbyImageData
       }
