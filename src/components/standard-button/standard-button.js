@@ -7,11 +7,7 @@ const StandardButton = ({
   onClick = () => {},
   link = '/',
 }) => {
-  return (
-    <DefaultButton onClick={onClick}>
-      <Link to={link}>{title}</Link>
-    </DefaultButton>
-  )
+  return <DefaultButton onClick={onClick}>{title}</DefaultButton>
 }
 
 export default StandardButton

@@ -1,24 +1,28 @@
 import styled from 'styled-components'
-import { fontSize, padding, colors } from '../theme'
+import { fontSize, margin, padding, colors } from '../theme'
 
 const DefaultButton = styled.button`
-  cursor: pointer;
-  border: 2px soild black;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
   border-radius: 5px;
-  background: ${colors.white};
   padding: ${padding.small};
   font-size: ${fontSize.small};
   font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  margin-right: ${margin.small};
 
   &:hover {
-    border-color: ${colors.red};
+    border-color: ${colors.red85};
+    color: ${colors.red85};
   }
 
-  &:selected {
+  &:focus {
     background-color: black;
     color: white;
+    border-color: black;
   }
 `
 

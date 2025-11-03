@@ -3,9 +3,10 @@ import { fontSize, padding, colors } from '../theme'
 
 const RedButton = styled.button`
   cursor: pointer;
+  width: 100%;
   border: none;
   border-radius: 5px;
-  background: ${colors.red};
+  background: ${colors.red85};
   padding: ${padding.small};
   font-size: ${fontSize.small};
   font-weight: bold;
@@ -13,7 +14,7 @@ const RedButton = styled.button`
   color: #ffffff;
 
   &:hover {
-    background: ${colors.red85};
+    background: ${colors.red};
   }
 `
 
