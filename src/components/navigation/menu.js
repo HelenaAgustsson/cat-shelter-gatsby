@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import CTAButton from '../button/CTAButton'
+import Button from '../button/Button'
 import { MenuContainer, MenuLink, ButtonContainer } from './styles'
 
 const Menu = ({ links }) => {
@@ -12,7 +12,7 @@ const Menu = ({ links }) => {
         </MenuLink>
       ))}
       <ButtonContainer>
-        <CTAButton cta="Donate" />
+        <Button cta="Donate" link="/donate" />
       </ButtonContainer>
     </MenuContainer>
   )
