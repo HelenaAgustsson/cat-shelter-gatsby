@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import CTAButton from './CTAButton'
+import CTAButton from './cta-button'
 
 const data = {
   cta: 'Donate',
