@@ -12,7 +12,7 @@ const Menu = ({ links }) => {
         </MenuLink>
       ))}
       <ButtonContainer>
-        <CTAButton cta="Donate" />
+        <CTAButton cta="Donate" link="/donate" />
       </ButtonContainer>
     </MenuContainer>
   )
