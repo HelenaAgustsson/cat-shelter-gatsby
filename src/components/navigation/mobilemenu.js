@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Button from '../button/Button'
+import CTAButton from '../CTAButton/CTAButton'
 import { MobileMenuContainer, MenuLink, ButtonContainer } from './styles'
 
 const MobileMenu = ({ links, isOpen }) => {
@@ -14,7 +14,7 @@ const MobileMenu = ({ links, isOpen }) => {
             </MenuLink>
           ))}
           <ButtonContainer>
-            <Button cta="Donate" link="/donate" />
+            <CTAButton cta="Donate" link="/donate" />
           </ButtonContainer>
         </div>
       ) : null}
