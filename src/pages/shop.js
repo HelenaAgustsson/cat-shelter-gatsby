@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Hero from '../components/hero/hero'
+import ContentContainer from '../components/content-container/content-container'
 import Section from '../components/section/section'
 import Grid from '../components/grid/grid'
 import TextBlock from '../components/textblock/textblock'
-import ContentContainer from '../components/ContentContainer/contentcontainer'
 
 const ProductListPage = ({ data }) => {
   const pageData = data.contentfulProductListPage

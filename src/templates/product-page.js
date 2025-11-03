@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
-import ContentContainer from '../components/ContentContainer/contentcontainer'
+import ContentContainer from '../components/content-container/content-container'
 import Product from '../components/product/product'
 import SiteLink from '../components/sitelink/sitelink'
 
