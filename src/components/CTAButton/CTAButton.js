@@ -1,12 +1,12 @@
 import React from 'react'
-import DefaultButton from './styles'
+import RedButton from './styles'
 import { Link } from 'gatsby'
 
 const CTAButton = ({ cta = 'Submit', onClick = () => {}, link }) => {
   return (
-    <DefaultButton onClick={onClick}>
+    <RedButton onClick={onClick}>
       <Link to={link}>{cta}</Link>
-    </DefaultButton>
+    </RedButton>
   )
 }
 

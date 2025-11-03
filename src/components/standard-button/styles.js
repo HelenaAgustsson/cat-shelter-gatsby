@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { fontSize, padding, colors } from '../theme'
 
-const RedButton = styled.button`
+const DefaultButton = styled.button`
   cursor: pointer;
-  border: none;
+  border: 2px soild black;
   border-radius: 5px;
-  background: ${colors.red};
+  background: ${colors.white};
   padding: ${padding.small};
   font-size: ${fontSize.small};
   font-weight: bold;
@@ -13,8 +13,13 @@ const RedButton = styled.button`
   color: #ffffff;
 
   &:hover {
-    background: ${colors.red85};
+    border-color: ${colors.red};
+  }
+
+  &:selected {
+    background-color: black;
+    color: white;
   }
 `
 
-export default RedButton
+export default DefaultButton
