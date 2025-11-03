@@ -21,7 +21,7 @@ const Product = ({ productData }) => {
         </ImageContainer>
         <ProductDetails>
           <ProductTitle>{title}</ProductTitle>
-          {productData?.details.details}
+          {productData?.details?.details}
         </ProductDetails>
       </FlexContainer>
     </Section>
