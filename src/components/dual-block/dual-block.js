@@ -2,12 +2,13 @@ import React from 'react'
 import { DualContainer, Header, TextContainer, ImageContainer } from './styles'
 
 const DualBlock = ({ data }) => {
+  const { title, text, image } = { ...data }
   return (
     <DualContainer>
-      <ImageContainer $image={data.image.file.url} />
+      {image ? <ImageContainer $image={image.file.url} /> : null}
       <TextContainer>
-        <Header>{data.title}</Header>
-        {data.text}
+        <Header>{title}</Header>
+        {text}
       </TextContainer>
     </DualContainer>
   )
