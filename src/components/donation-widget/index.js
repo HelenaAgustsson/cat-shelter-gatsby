@@ -14,6 +14,7 @@ const DonationWidget = ({ data }) => {
   const { title, subtitle, image, cta } = { ...data }
   return (
     <DonationContainer>
+      <ImageContainer $image={image.file.url} />
       <TextContainer>
         <Header>{title}</Header>
         {subtitle}
@@ -26,7 +27,6 @@ const DonationWidget = ({ data }) => {
           <CTAButton cta={cta} link="" />
         </CTAContainer>
       </TextContainer>
-      <ImageContainer $image={image.file.url} />
     </DonationContainer>
   )
 }

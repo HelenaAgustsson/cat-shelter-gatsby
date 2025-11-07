@@ -1,21 +1,18 @@
 import styled from 'styled-components'
-import { colors, padding, fontSize } from '../theme'
+import { breakpoint, colors, padding, fontSize } from '../theme'
 
 export const DualContainer = styled.div`
-  height: 400px;
-  display: flex;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: ${colors.teal};
-`
 
-export const TextContainer = styled.div`
-  width: 50%;
-  padding: ${padding.xlarge} ${padding.large};
-  color: ${colors.white};
-  font-size: ${fontSize.medium};
+  ${breakpoint.tablet`
+    grid-template-columns: 1fr 1fr;
+  `}
 `
 
 export const ImageContainer = styled.div`
-  width: 50%;
   background-image: ${({ $image }) => `
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         image-set(
@@ -23,8 +20,24 @@ export const ImageContainer = styled.div`
         )`};
   background-position: center;
   background-size: cover;
+  min-height: 250px;
 `
 
-export const Header = styled.h2`
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: ${padding.large};
+  padding-top: 0;
+  color: ${colors.white};
+  font-size: ${fontSize.medium};
+
+  ${breakpoint.tablet`
+    padding: ${padding.xlarge};
+    padding-top: 0;
+  `}
+`
+
+export const Header = styled.h3`
   font-weight: bold;
 `
