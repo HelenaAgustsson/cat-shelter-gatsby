@@ -1,12 +1,34 @@
 import styled from 'styled-components'
-import { colors, margin, padding, fontSize } from '../theme'
+import { breakpoint, colors, margin, padding, fontSize } from '../theme'
 
 export const DonationContainer = styled.div`
-  height: 400px;
-  display: flex;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
   border-radius: 5px;
   background-color: black;
   color: white;
+
+  ${breakpoint.tablet`
+    grid-template-columns: 1fr 1fr;
+  `}
+`
+
+export const ImageContainer = styled.div`
+  min-height: 250px;
+  background-image: ${({ $image }) => `
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        image-set(
+            url(${$image}) type("image/jpeg")
+        )`};
+  background-position: center;
+  background-size: cover;
+`
+
+export const TextContainer = styled.div`
+  padding: ${padding.large} ${padding.large};
+  font-size: ${fontSize.medium};
+  border-right: none;
 `
 
 export const ButtonContainer = styled.div`
@@ -20,24 +42,6 @@ export const CTAContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: ${margin.medium};
-`
-
-export const TextContainer = styled.div`
-  width: 50%;
-  padding: ${padding.large} ${padding.large};
-  font-size: ${fontSize.medium};
-  border-right: none;
-`
-
-export const ImageContainer = styled.div`
-  width: 50%;
-  background-image: ${({ $image }) => `
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        image-set(
-            url(${$image}) type("image/jpeg")
-        )`};
-  background-position: center;
-  background-size: cover;
 `
 
 export const Header = styled.h3`
