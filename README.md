@@ -6,7 +6,7 @@ This is a site I have developed for my portfolio, created using [Gatsby](http://
 ## Features
 
 - Gatsby SSG
-- Contentful headless CM
+- Contentful headless CMS
 - Written in React
 - Unit testing with Jest and RTL.
 
