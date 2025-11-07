@@ -8,7 +8,6 @@ import TextBlock from '../components/textblock/textblock'
 import DualBlock from '../components/dual-block/dual-block'
 
 const HomePage = ({ data }) => {
-  console.log(data)
   const pageData = data.contentfulHomepage
   const img = pageData.heroImage
   const pagetitle = pageData.pagetitle
