@@ -1,20 +1,15 @@
-# Contentful Gatsby Starter Blog
+# The Cat Shelter: a jamstack site built with Gatsby
 
-Create a [Gatsby](http://gatsbyjs.com/) blog powered by [Contentful](https://www.contentful.com).
+This is a site I have developed for my portfolio, created using [Gatsby](http://gatsbyjs.com/) and [Contentful](https://www.contentful.com).
 
-Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
-
-With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
 
 ## Features
 
-- Simple content model and structure. Easy to adjust to your needs.
-- Use the [synchronization feature](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization) of our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
-- Responsive/adaptive images via [gatsby-plugin-image](https://www.gatsbyjs.org/packages/gatsby-plugin-image/) and our [Images API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type).
+- Gatsby SSG
+- Contentful headless CM
+- Written in React
+- Unit testing with Jest and RTL.
 
-## Getting started
-
-See our [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
 
 ### Set up of the needed content model and create a configuration file
 
@@ -42,8 +37,3 @@ Spin up a production-ready server with your blog. Don't forget to build your pag
 
 See the [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
 
-## Contribution
-
-Feel free to open pull requests to fix bugs. If you want to add features, please have a look at the [original version](https://github.com/contentful-userland/gatsby-contentful-starter). It is always open to contributions and pull requests.
-
-You can learn more about how Contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
