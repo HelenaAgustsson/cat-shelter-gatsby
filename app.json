@@ -1,13 +1,13 @@
 {
-  "name": "Helenas Jamstack site",
-  "description": "Helenas Jamstack site: gatsby, react, contentful, netlify, circleci",
+  "name": "The Cat Shelter",
+  "description": "Portfolio jamstack site built with gatsby, react, contentful",
   "keywords": [
-    "contentful",
     "gatsby",
+    "contentful",
     "static",
     "ssg"
   ],
-  "repository": "https://github.com/HelenaAgustsson/jamstack-site",
+  "repository": "https://github.com/HelenaAgustsson/cat-shelter-gatsby",
   "success_url": "/",
   "buildpacks": [
     {
