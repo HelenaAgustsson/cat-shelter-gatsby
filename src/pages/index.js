@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
-import StandardHero from '../components/hero/hero'
+import HomepageHero from '../components/homepage-hero/hero'
 import ContentContainer from '../components/content-container/content-container'
 import Section from '../components/section/section'
 import TextBlock from '../components/textblock/textblock'
@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
+      <HomepageHero heroImage={img} pagetitle={pagetitle} />
       <ContentContainer>
         <Section>
           {textBlocks.map((block, index) => (
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         file {
           url
         }
+        gatsbyImageData(height: 500)
       }
       textBlock {
         header
