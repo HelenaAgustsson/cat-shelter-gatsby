@@ -25,7 +25,7 @@ module.exports = {
       resolve: `gatsby-plugin-image`,
       options: {
         defaults: {
-          placeholder: `blurred`,
+          placeholder: `dominantColor`,
         },
       },
     },
