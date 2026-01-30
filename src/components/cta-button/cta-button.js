@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 
 const CTAButton = ({ cta = 'Submit', onClick = () => {}, link = '/' }) => {
   return (
-    <RedButton onClick={onClick}>
-      <Link to={link}>{cta}</Link>
-    </RedButton>
+    <Link to={link}>
+      <RedButton onClick={onClick}>{cta}</RedButton>
+    </Link>
   )
 }
 
