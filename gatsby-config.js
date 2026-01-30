@@ -18,18 +18,18 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-image`,
       options: {
         defaults: {
-          placeholder: `dominantColor`,
+          placeholder: `blurred`,
         },
       },
     },
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

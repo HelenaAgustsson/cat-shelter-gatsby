@@ -1,20 +1,10 @@
 import styled from 'styled-components'
-import { breakpoint, fontSize, margin, padding, sizes } from '../theme'
+import { breakpoint, fontSize, padding, sizes } from '../theme'
 
-export const HeroContainer = styled.div``
-
-export const Hero = styled.div`
+export const HeroContainer = styled.div`
   width: 100%;
+  margin: auto;
   height: 400px;
-  display: flex;
-  background-image: ${({ $image }) => `
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        image-set(
-            url(${$image}?fm=avif) type("image/avif"),
-            url(${$image}) type("image/jpeg")
-        )`};
-  background-position: center;
-  background-size: cover;
 `
 
 export const BackgroundContainer = styled.div`
@@ -23,20 +13,13 @@ export const BackgroundContainer = styled.div`
 `
 
 export const TitleContainer = styled.div`
-  margin: ${margin.small} 0;
-  align-self: start;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
+  position: absolute;
+  top: 0;
   display: none;
-  border-radius: 5px;
 
   ${breakpoint.tablet`
     display: flex;
     padding: 0 ${padding.large};
-  `}
-
-  ${breakpoint.monitor`
-    padding: 0;
   `}
 `
 
@@ -53,6 +36,7 @@ export const Title = styled.h1`
 
 export const MobileTitle = styled.div`
   padding-left: ${padding.medium};
+
   ${breakpoint.tablet`
     display:none;
   `};
