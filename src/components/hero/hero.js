@@ -1,31 +1,38 @@
 import React from 'react'
-//import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import {
   HeroContainer,
-  Hero,
-  BackgroundContainer,
   TitleContainer,
   Title,
   MobileTitle,
+  BackgroundContainer,
 } from './styles'
 
-const StandardHero = ({ heroImage, pagetitle }) => {
-  //const image = getImage(heroImage)
+const Hero = ({ heroImage, pagetitle }) => {
   return (
-    <HeroContainer>
-      <Hero $image={heroImage.file.url}>
-        <BackgroundContainer>
-          <TitleContainer>
-            <Title>{pagetitle}</Title>
-          </TitleContainer>
-        </BackgroundContainer>
-      </Hero>
+    <div>
+      <HeroContainer>
+        <GatsbyImage
+          image={heroImage.gatsbyImageData}
+          alt=""
+          loading="eager"
+          objectFit="cover"
+          style={{ width: '100%', height: '100%' }}
+        />
+      </HeroContainer>
+
+      <BackgroundContainer>
+        <TitleContainer>
+          <Title>{pagetitle}</Title>
+        </TitleContainer>
+      </BackgroundContainer>
+
       <MobileTitle>
         <Title>{pagetitle}</Title>
       </MobileTitle>
-    </HeroContainer>
+    </div>
   )
 }
 
-export default StandardHero
+export default Hero

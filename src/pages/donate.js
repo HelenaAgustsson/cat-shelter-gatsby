@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import ContentContainer from '../components/content-container/content-container'
-import StandardHero from '../components/hero/hero'
+import Hero from '../components/hero/hero'
 import Section from '../components/section/section'
 import TextBlock from '../components/textblock/textblock'
 import DonationWidget from '../components/donation-widget'
@@ -14,7 +14,7 @@ const DonatePage = ({ data }) => {
 
   return (
     <Layout>
-      <StandardHero heroImage={img} pagetitle={pagetitle}></StandardHero>
+      <Hero heroImage={img} pagetitle={pagetitle} />
       <ContentContainer>
         <Section>
           <TextBlock data={pageData.textBlock} />
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
         file {
           url
         }
+        gatsbyImageData(width: 1500, placeholder: BLURRED)
       }
       textBlock {
         header

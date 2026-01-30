@@ -37,7 +37,7 @@ export const pageQuery = graphql`
         file {
           url
         }
-        gatsbyImageData(height: 300)
+        gatsbyImageData(width: 1500, placeholder: BLURRED)
       }
       textBlock {
         header
