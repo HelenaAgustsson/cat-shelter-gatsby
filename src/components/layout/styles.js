@@ -3,6 +3,10 @@ import { breakpoint, fontSize, padding, width } from '../theme'
 
 export const LayoutDiv = styled.div`
   padding: ${padding.medium};
+
+  ${breakpoint.desktopWide`
+    padding: 0
+`};
 `
 export const PageContainer = styled.main`
   min-height: 100vh;
