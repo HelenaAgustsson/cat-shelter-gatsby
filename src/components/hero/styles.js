@@ -4,7 +4,7 @@ import { breakpoint, fontSize, padding, sizes } from '../theme'
 export const HeroContainer = styled.div`
   width: 100%;
   margin: auto;
-  height: 400px;
+  height: 500px;
 `
 
 export const BackgroundContainer = styled.div`

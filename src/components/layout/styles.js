@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import { breakpoint, fontSize, padding, width } from '../theme'
 
-export const LayoutDiv = styled.div`
-  padding: ${padding.medium};
-`
 export const PageContainer = styled.main`
   min-height: 100vh;
   position: relative;

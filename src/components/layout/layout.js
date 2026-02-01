@@ -20,14 +20,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <LayoutDiv>
+    <div>
       <SiteNav
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata?.title}
       />
       <PageContainer>{children}</PageContainer>
       <Footer></Footer>
-    </LayoutDiv>
+    </div>
   )
 }
 
