@@ -1,37 +1,79 @@
-# The Cat Shelter
+# 🐱 Cat Shelter App
 
-This is a site I have developed for my portfolio, created using [Gatsby](http://gatsbyjs.com/) and [Contentful](https://www.contentful.com) and deployed with [Netlify](https://www.netlify.com/): 
+A responsive web application for browsing, managing, and showcasing cats available for adoption, as well as an online shop.
 
-https://helenas-cat-shelter.netlify.app/
+Built as a portfolio project to explore static site generation, data-driven UI, and component-based architecture using Gatsby.
 
-## Features
+🚀 Live Demo https://helenas-cat-shelter.netlify.app/
 
-- Gatsby SSG
-- Contentful headless CMS
-- Decoupled web architecture
-- Written in React/JavaScript
-- Unit testing with Jest and RTL
+## Learning & Application
 
+This project was built to consolidate and apply skills developed during my time at Shelter in an independent setting.
 
-## Set up
+It focuses on translating real-world experience into a structured, component-driven application using Gatsby and Contentful.
 
-This project comes with a Contentful setup command `npm run setup`.
+Key areas:
 
-This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./.contentful.json`).
+- Building reusable, maintainable React components
+- Structuring content using a headless CMS (Contentful)
+- Working with Gatsby’s data layer and GraphQL
+- Creating performant static sites with clear separation of data and presentation
 
-`npm run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+## 🛠️ Tech Stack
 
+- Framework: Gatsby
+- Language: JavaScript / React
+- Styling: Styled Components
+- Testing: Jest and RTL
+- Data: Contentful + GraphQL
 
-## Crucial Commands
+## Project Sructure
 
-### `npm run dev`
+```
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Gatsby pages (routing)
+│   ├── templates/      # Page templates (if used)
+│   └── data/           # Data sources (if applicable)
+├── gatsby-config.js    # Site configuration
+├── gatsby-node.js      # Node APIs (if used)
+└── package.json
+```
 
-Run the project locally with live reload in development mode.
+## ⚙️ Getting Started
 
-### `npm run build`
+### ⚠️ This project relies on Contentful for content data.
 
-Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+If you don’t provide valid credentials, the site will not render content locally.
 
-### `npm run serve`
+A live demo is available if you prefer not to set up the CMS locally: https://helenas-cat-shelter.netlify.app/
 
-Spin up a production-ready server with your blog. Don't forget to build your page beforehand.
+If you have access to the correct Contentful enviroment, follow these intructions:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/HelenaAgustsson/cat-shelter-gatsby.git
+cd cat-shelter-gatsby
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Set up Contentful
+
+Run the setup script:
+
+```
+npm run setup
+```
+
+This will:
+
+- prompt you for your Contentful Space ID
+- ask for Management API and Delivery API tokens
+- import the required content model
+- generate a .contentful.json config file
