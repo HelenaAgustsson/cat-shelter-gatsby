@@ -15,7 +15,7 @@ const Hero = ({ heroImage, pagetitle }) => {
       <HeroContainer>
         <GatsbyImage
           image={heroImage.gatsbyImageData}
-          alt=""
+          alt={heroImage.description || pagetitle}
           loading="eager"
           objectFit="cover"
           style={{ width: '100%', height: '100%' }}

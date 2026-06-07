@@ -41,10 +41,11 @@ export const pageQuery = graphql`
       pagetitle
       heroImage {
         description
-        file {
-          url
-        }
-        gatsbyImageData(width: 1500)
+        gatsbyImageData(
+          width: 1500
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
       textBlock {
         header
