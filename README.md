@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="./static/catshelter-screenshot.webp" alt="Cat Shelter preview" width="900"/>
+</p>
+
 # 🐱 Cat Shelter App
 
 A responsive web application for browsing, managing, and showcasing cats available for adoption, as well as an online shop.
