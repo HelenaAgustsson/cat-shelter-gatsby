@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   return (
     <LayoutDiv>
       <Helmet>
-        <title>Cat Shelter</title>
+        <title>The Cat Shelter</title>
         <meta
           property="og:image"
           content="https://helenas-cat-shelter.netlify.app/preview.png"
@@ -48,10 +48,13 @@ const Layout = ({ children }) => {
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:title" content="Helena's Cat Shelter" />
+        <meta
+          property="og:title"
+          content="The Cat Shelter - a home for every cat in need"
+        />
         <meta
           property="og:description"
-          content="Helena's Cat Shelter is a non-profit organization dedicated to finding loving homes for cats in need. Browse our cats and start your adoption journey today."
+          content="The Cat Shelter is a non-profit organization dedicated to finding loving homes for cats in need. Browse our cats and start your adoption journey today."
         />
         <meta
           property="og:url"
