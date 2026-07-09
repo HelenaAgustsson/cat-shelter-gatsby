@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <meta
           property="og:image"
-          content="https://helenas-cat-shelter.netlify.app/catshelter-screenshot.webp"
+          content="https://helenas-cat-shelter.netlify.app/preview"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
