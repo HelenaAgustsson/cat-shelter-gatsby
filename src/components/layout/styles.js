@@ -25,3 +25,12 @@ export const FooterDiv = styled.footer`
     width: ${width.large}
 `};
 `
+
+export const FooterLink = styled.a`
+  color: var(--primary);
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
