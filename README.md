@@ -31,7 +31,7 @@ Key areas:
 - Testing: Jest and RTL
 - Data: Contentful + GraphQL
 
-## Project Sructure
+## Project Structure
 
 ```
 ├── src/
