@@ -23,9 +23,10 @@ const Layout = ({ children }) => {
   return (
     <LayoutDiv>
       <Helmet>
+        <title>Cat Shelter</title>
         <meta
           property="og:image"
-          content="https://helenas-cat-shelter.netlify.app/preview"
+          content="https://helenas-cat-shelter.netlify.app/preview.png"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
