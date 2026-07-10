@@ -50,7 +50,8 @@ export const Header = styled.h3`
 
 export const TransparentButton = styled.button`
   color: white;
-  background-color: ${colors.transparent};
+  background-color: ${({ $selected }) =>
+    $selected ? colors.white : colors.transparent};
   border: 2px solid white;
   border-radius: 5px;
   padding: ${padding.small};
@@ -60,6 +61,7 @@ export const TransparentButton = styled.button`
   cursor: pointer;
   width: 100%;
   margin-right: ${margin.small};
+  ${({ $selected }) => $selected && `color: black;`}
 
   &:hover {
     background-color: white;
@@ -70,4 +72,18 @@ export const TransparentButton = styled.button`
     background-color: white;
     color: black;
   }
+`
+
+export const ThankYouContainer = styled.div`
+  padding: ${padding.large} ${padding.large};
+  font-size: ${fontSize.medium};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+export const ThankYouHeader = styled.h3`
+  font-weight: bold;
+  font-size: ${fontSize.medium};
+  margin-bottom: ${margin.small};
 `
